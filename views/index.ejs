@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to-do-list</title>
+    <link rel="stylesheet" href="../public/style/layout.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="date">
+            <h1>
+                <%=kind_of_day%>
+            </h1>
+        </div>
+        <div class="task_list">
+            <ul class="box">
+                <div class="item">
+                    <input type="checkbox">
+                    <p>
+                        be my guest
+                    </p>
+                </div>
+                <div class="item">
+                    <input type="checkbox">
+                    <p>
+                        be my guest
+                    </p>
+                </div>
+                <div class="item">
+                    <input type="checkbox">
+                    <p>
+                        be my guest
+                    </p>
+                </div>
+                <% for(let i=0;i<new_task.length;i++){ %>
+                    <div class="item">
+                        <input type="checkbox">
+                        <p>
+                            <%= new_task[i] %>
+                        </p>
+                    </div>
+                    <% } %>
+                        <form action="/" method="post">
+                            <input type="text" name="newItem" autocomplete="off" placeholder="Enter your new task">
+                            <button type="submit">+</button>
+                        </form>
+            </ul>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
